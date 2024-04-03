@@ -67,12 +67,36 @@
     line-height: 24px;
 }
 
-.cart {
+.cart-btn {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    font-size: 2rem;
-    color: var(--white);
-    margin-right: 20px;
-    line-height: 40px;
+    margin-right: 10px;
+    cursor: pointer;
+    display: flex;
+    border: 1px solid var(--white);
+}
+
+.cart-icon {
+    width: 20px;
+    height: 20px;
+    color: white;
+    margin: auto;
+}
+
+.non-user-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 12px;
+    cursor: pointer;
+    display: flex;
+    border: 1px solid var(--white);
+}
+
+.non-user-icon {
+    width: 20px;
+    height: 20px;
+    color: white;
+    margin: auto;
 }
