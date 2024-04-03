@@ -61,7 +61,6 @@ function Menu({ children, items = [], hideOnClick = false, onChange = defaultFn,
             placement="bottom-end"
             render={renderResult}
             onHide={handleResetMenu}
-            visible
         >
             {children}
         </Tippy>

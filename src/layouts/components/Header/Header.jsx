@@ -20,18 +20,9 @@ import styles from './Header.module.scss'
 
 const cx = classNames.bind(styles)
 
-const MENU_ITEMS = [
-
-    {
-        icon: <FontAwesomeIcon icon={faCircleQuestion} />,
-        title: 'Feedback and help',
-        to: '/feedback'
-    }
-]
-
 function Header() {
 
-    const currentUser = false
+    const currentUser = true
 
     const handleMenuChange = (menuItem) => {
         console.log(menuItem)
@@ -44,11 +35,15 @@ function Header() {
             to: '/@me'
         },
         {
+            icon: <FontAwesomeIcon icon={faCircleQuestion} />,
+            title: 'Feedback and help',
+            to: '/feedback'
+        },
+        {
             icon: <FontAwesomeIcon icon={faGear} />,
             title: 'Settings',
             to: '/settings'
         },
-        ...MENU_ITEMS,
         {
             icon: <FontAwesomeIcon icon={faSignOut} />,
             title: 'Log out',
@@ -68,12 +63,12 @@ function Header() {
 
 
                 <div className={cx('actions')}>
+                    <span className={cx('cart')}>
+                        <FontAwesomeIcon icon={faCartArrowDown} />
+                    </span>
                     {currentUser ? (
                         <>
-                            <a className={cx('cart')}>
-                                <FontAwesomeIcon icon={faCartArrowDown} />
-                            </a>
-                            <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
+                            <Menu items={userMenu} onChange={handleMenuChange}>
                                 <Image
                                     className={cx('user-avatar')}
                                     src="https://sm.ign.com/ign_nordic/cover/a/avatar-gen/avatar-generations_prsz.jpg"
@@ -81,22 +76,14 @@ function Header() {
                                     fallback='https://yt3.googleusercontent.com/UsflU74uvka_3sejOu3LUGwzOhHJV0eIYoWcvOfkOre_c12uIN4ys-QqRlAkbusEmbZjTA-b=s900-c-k-c0x00ffffff-no-rj'
                                 />
                             </Menu>
-
                         </>
                     ) : (
                         <>
-                            <a className={cx('cart')}>
-                                <FontAwesomeIcon icon={faCartArrowDown} />
-                            </a>
-                            <a className={cx('non-user')}>
+                            <Button text leftIcon>
                                 <FontAwesomeIcon icon={faUser} />
-                            </a>
-
+                            </Button>
                         </>
                     )}
-
-
-
                 </div>
             </div>
         </header >
