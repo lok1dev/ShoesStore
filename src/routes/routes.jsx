@@ -1,13 +1,11 @@
-import config from '~/config';
+import config from "~/config";
 
 // Layouts
-import Home from '~/pages/Home';
+import Home from "~/pages/Home";
 import Profile from "~/pages/Profile";
 import Upload from "~/pages/Upload";
 import Search from "~/pages/Search";
-
-
-
+import Contact from "~/pages/Contact/Contact";
 
 // Public routes
 const publicRoutes = [
@@ -15,11 +13,9 @@ const publicRoutes = [
     { path: config.routes.profile, component: Profile },
     { path: config.routes.search, component: Search, layout: null },
     { path: config.routes.upload, component: Upload, layout: Upload },
+    { path: config.routes.contact, component: Contact },
+];
 
-]
+const privateRoutes = [];
 
-const privateRoutes = [
-
-]
-
-export { publicRoutes, privateRoutes }
+export { publicRoutes, privateRoutes };

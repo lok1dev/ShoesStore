@@ -1,0 +1,17 @@
+.wrapper {
+    margin-top: 50px;
+}
+
+.banner-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.banner-1 {
+    flex-basis: 100%;
+}
+
+.banner-2,
+.banner-3 {
+    flex-basis: 50%;
+}

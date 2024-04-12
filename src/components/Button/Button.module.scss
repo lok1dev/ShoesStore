@@ -49,11 +49,10 @@
 .primary {
     background-color: #5bc0de;
     color: var(--white);
-    border-color: var(--primary);
 
     &:hover {
-        background-color: var(--primary);
         opacity: 0.8;
+        color: black;
     }
 }
 
