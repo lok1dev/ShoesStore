@@ -13,9 +13,7 @@ function ListPosts() {
     useEffect(() => {
         const getPosts = async () => {
             try {
-                const res = await axios.get(
-                    "https://www.googleapis.com/blogger/v3/blogs/8061548615224774652/posts?key=AIzaSyCNX_KEqbcvOPbkFbgZGsKNZwQvx7J0uNQ"
-                );
+                const res = await axios.get(process.env.BLOGGER_URL);
                 setPosts(res.data.items);
             } catch (error) {
                 console.error("Error fetching posts:", error);
