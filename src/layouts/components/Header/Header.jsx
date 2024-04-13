@@ -14,7 +14,7 @@ import styles from "./Header.module.scss";
 const cx = classNames.bind(styles);
 
 function Header() {
-    const currentUser = true;
+    const currentUser = false;
 
     const handleMenuChange = (menuItem) => {
         console.log(menuItem);

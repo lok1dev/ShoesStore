@@ -1,7 +1,8 @@
 const routes = {
-    home: '/',
-    collections: '/collections',
-    contact: '/contact'
-}
+    home: "/",
+    collections: "/collections",
+    contact: "/contact",
+    posts: "/posts",
+};
 
-export default routes
+export default routes;

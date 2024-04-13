@@ -1,11 +1,24 @@
 import classNames from "classnames/bind";
-import styles from "./Contact.module.scss";
-import Breadcumb from "~/components/Breadcumb/Breadcumb";
-import Button from "~/components/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocation } from "@fortawesome/free-solid-svg-icons";
 
+import styles from "./Contact.module.scss";
+import Breadcumb from "~/components/Breadcumb/Breadcumb";
+import Button from "~/components/Button";
+import CarouselCpn from "~/components/CarouselCpn/Carousel";
+
 const cx = classNames.bind(styles);
+
+const images = [
+    "https://saigonsneaker.com/wp-content/uploads/2019/11/adidas-superstar-feeback_0009_IMG_9869.jpg.webp",
+    "https://saigonsneaker.com/wp-content/uploads/2019/11/adidas-superstar-feeback_0008_IMG_9862.jpg.webp",
+    "https://saigonsneaker.com/wp-content/uploads/2019/11/adidas-superstar-feeback_0007_IMG_9885.jpg.webp",
+    "https://saigonsneaker.com/wp-content/uploads/2019/11/adidas-superstar-feeback_0006_IMG_9873.jpg.webp",
+    "https://saigonsneaker.com/wp-content/uploads/2019/11/adidas-superstar-feeback_0005_IMG_9875.jpg.webp",
+    "https://saigonsneaker.com/wp-content/uploads/2019/11/adidas-superstar-feeback_0002_IMG_0493.jpg.webp",
+    "https://saigonsneaker.com/wp-content/uploads/2019/11/adidas-superstar-feeback_0001_IMG_0946-2.jpg.webp",
+    "https://saigonsneaker.com/wp-content/uploads/2019/11/adidas-superstar-feeback_0000_IMG_0485-2.jpg.webp",
+];
 
 function Contact() {
     return (
@@ -55,6 +68,7 @@ function Contact() {
                     <li className={cx("item-info")}>Có chỗ đỗ xe máy, xe hơi.</li>
                 </ul>
             </div>
+            <CarouselCpn imgs={images} />
         </div>
     );
 }

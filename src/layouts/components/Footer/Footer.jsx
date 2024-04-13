@@ -27,7 +27,7 @@ function Footer() {
                         </Button>
                     </div>
                     <div className={cx("desciption")}>
-                        <Button className={cx("btn")} transparent small>
+                        <Button to="/contact" className={cx("btn")} transparent small>
                             Liên hệ
                         </Button>
                     </div>

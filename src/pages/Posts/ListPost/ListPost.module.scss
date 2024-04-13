@@ -1,0 +1,41 @@
+.header {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.header-title {
+    font-size: 3rem;
+}
+
+.wrapper {
+    display: flex;
+    border: 1px solid #000000;
+    margin: 40px 20px;
+    border-radius: 10px;
+    max-height: 100px;
+
+    &:last-child {
+        margin-bottom: 40px;
+    }
+}
+
+.img {
+    width: 200px;
+    height: 100px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.info {
+    margin: 10px 0 0 20px;
+}
+
+.title {
+    font-size: 20px;
+    flex: 1;
+}
+
+.date {
+    margin-top: 10px;
+}
